@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Sites</h2>
+  <div>This is the sites page</div>
+  <table ng-controller="SiteIndexCtrl">
+    <thead>
+      <th>Name</th>
+      <th>Reserved By</th>
+      <th>LO Hostname</th>
+      <th>Description</th>
+      <th>Bus</th>
+      <th>Org</th>
+    </thead>
+    <tr ng-repeat="site in sites">
+      <td>{{site.name}}</td>
+      <td>{{site.reserved_by}}</td>
+      <td>{{site.lo_hostname}}</td>
+      <td>{{site.description}}</td>
+      <td>{{site.bus_id}}</td>
+      <td>{{site.org_id}}</td>
+      <td><a ng-href="#/sites/edit/{{site.id}}">Edit</a></td>
+      <!-- change name:<input type="text" ng-model="bus.name"/><button type="submit" ng-click="bus.put()">update</button> -->
+      <!-- add new: <br/> -->
+      <!-- <input type="text" ng-model="newBus.name"/><button type="submit" ng-click="add()">add</button> -->
+    </tr>
+  </table>
+  <a ng-href="#/sites/create">Create</a>
+</div>

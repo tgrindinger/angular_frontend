@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Sites</h2>
+  <div>This is the edit site page</div>
+  <table>
+    <tr>
+      <td><label>Name</label></td>
+      <td><input type="text" ng-model="site.name"/></td>
+    </tr>
+    <tr>
+      <td><label>Reserved By</label></td>
+      <td><input type="text" ng-model="site.reserved_by"/></td>
+    </tr>
+    <tr>
+      <td><label>LO Hostname</label></td>
+      <td><input type="text" ng-model="site.lo_hostname"/></td>
+    </tr>
+    <tr>
+      <td><label>Description</label></td>
+      <td><input type="text" ng-model="site.description"/></td>
+    </tr>
+    <tr>
+      <td><label>Bus</label></td>
+      <td><input type="number" ng-model="site.bus_id"/></td>
+    </tr>
+    <tr>
+      <td><label>Org</label></td>
+      <td><input type="number" ng-model="site.org_id"/></td>
+    </tr>
+  </table>
+  <button ng-click="save()" ng-disabled="isClean()" class="btn btn-primary">Save</button>
+  <a ng-href="#/sites">Cancel</a>
+      <!-- change name:<input type="text" ng-model="site.name"/><button type="submit" ng-click="site.put()">update</button> -->
+      <!-- add new: <br/> -->
+      <!-- <input type="text" ng-model="newSite.name"/><button type="submit" ng-click="add()">add</button> -->
+  </div>
+</div>

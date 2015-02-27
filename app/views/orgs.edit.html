@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Orgs</h2>
+  <div>This is the edit org page</div>
+  <table>
+    <tr>
+      <td><label>Name</label></td>
+      <td><input type="text" ng-model="org.name"/></td>
+    </tr>
+    <tr>
+      <td><label>Salesforce Org ID</label></td>
+      <td><input type="text" ng-model="org.sf_org_id"/></td>
+    </tr>
+    <tr>
+      <td><label>Login URL</label></td>
+      <td><input type="text" ng-model="org.login_url"/></td>
+    </tr>
+    <tr>
+      <td><label>Last Reload</label></td>
+      <td><input type="datetime-local" ng-model="org.last_reload"/></td>
+    </tr>
+    <tr>
+      <td><label>Last Renew</label></td>
+      <td><input type="datetime-local" ng-model="org.last_renew"/></td>
+    </tr>
+    <tr>
+      <td><label>Lock</label></td>
+      <td><input type="text" ng-model="org.lock"/></td>
+    </tr>
+    <tr>
+      <td><label>Source Org</label></td>
+      <td><input type="number" ng-model="org.source_org_id"/></td>
+    </tr>
+  </table>
+  <button ng-click="save()" ng-disabled="isClean()" class="btn btn-primary">Save</button>
+  <a ng-href="#/orgs">Cancel</a>
+      <!-- change name:<input type="text" ng-model="org.name"/><button type="submit" ng-click="org.put()">update</button> -->
+      <!-- add new: <br/> -->
+      <!-- <input type="text" ng-model="newBus.name"/><button type="submit" ng-click="add()">add</button> -->
+  </div>
+</div>

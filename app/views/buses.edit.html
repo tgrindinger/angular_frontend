@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Buses</h2>
+  <div>This is the edit bus page</div>
+  <table>
+    <tr>
+      <td><label>Name</label></td>
+      <td><input type="text" ng-model="bus.name"/></td>
+    </tr>
+    <tr>
+      <td><label>Url</label></td>
+      <td><input type="text" ng-model="bus.url"/></td>
+    </tr>
+  </table>
+  <button ng-click="save()" ng-disabled="isClean()" class="btn btn-primary">Save</button>
+  <a ng-href="#/buses">Cancel</a>
+      <!-- change name:<input type="text" ng-model="bus.name"/><button type="submit" ng-click="bus.put()">update</button> -->
+      <!-- add new: <br/> -->
+      <!-- <input type="text" ng-model="newBus.name"/><button type="submit" ng-click="add()">add</button> -->
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Orgs</h2>
+  <div>This is the orgs page</div>
+  <table ng-controller="OrgIndexCtrl">
+    <thead>
+      <td>Name</td>
+      <td>Salesforce Org ID</td>
+      <td>Login URL</td>
+      <td>Last Reload</td>
+      <td>Last Renew</td>
+      <td>Lock</td>
+      <td>Source Org</td>
+    </thead>
+    <tr ng-repeat="org in orgs">
+      <td>{{org.name}}</td>
+      <td>{{org.sf_org_id}}</td>
+      <td>{{org.login_url}}</td>
+      <td>{{org.last_reload}}</td>
+      <td>{{org.last_renew}}</td>
+      <td>{{org.lock}}</td>
+      <td>{{org.source_org_id}}</td>
+      <td><a ng-href="#/orgs/edit/{{org.id}}">Edit</a></td>
+      <!-- change name:<input type="text" ng-model="bus.name"/><button type="submit" ng-click="bus.put()">update</button> -->
+      <!-- add new: <br/> -->
+      <!-- <input type="text" ng-model="newBus.name"/><button type="submit" ng-click="add()">add</button> -->
+    </tr>
+  </table>
+  <a ng-href="#/orgs/create">Create</a>
+</div>
